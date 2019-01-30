@@ -8,12 +8,18 @@ namespace HandtestingCalculator
 {
     public class Calculator
     {
-        Exception divideByZero = new Exception();
+        public double Accumulator { get; private set; }
 
         public double Add(double a, double b)
         {
             double result = a + b;
             return result;
+        }
+
+        public double Add(double addend)
+        {
+            Accumulator = Accumulator + addend;
+            return Accumulator;
         }
 
         public double Subtract(double a, double b)
@@ -22,16 +28,22 @@ namespace HandtestingCalculator
             return result;
         }
 
+        public double Substract(double substractor)
+        {
+            Accumulator = Accumulator - substractor;
+            return Accumulator;
+        }
+
         public double Multiply(double a, double b)
         {
             double result = a * b;
             return result;
         }
 
-        public double Power(double x, double exp)
+        public double Multiply(double multiplier)
         {
-            double result = Math.Pow(x, exp);
-            return result;
+            Accumulator = Accumulator * multiplier;
+            return Accumulator;
         }
 
         public double Divide(double dividend, double divisor)
@@ -46,5 +58,25 @@ namespace HandtestingCalculator
                 return dividend / divisor;
             }
         }
+
+        public double Divide (double divisor)
+        {
+            Accumulator = Accumulator / divisor;
+            return Accumulator;
+        }
+
+        public double Power(double x, double exp)
+        {
+            double result = Math.Pow(x, exp);
+            return result;
+        }
+
+        public double Power(double exponent)
+        {
+            Accumulator = Math.Pow(Accumulator, exponent);
+            return Accumulator;
+
+        }
+
     }
 }
