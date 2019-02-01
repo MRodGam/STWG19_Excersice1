@@ -8,7 +8,7 @@ namespace HandtestingCalculator
 {
     public class Calculator
     {
-        public double Accumulator { get; private set; }
+        public double Accumulator { get; set; }
 
         public double Add(double a, double b)
         {
