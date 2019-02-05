@@ -65,4 +65,5 @@ namespace TestCalculator.Test.Unit
                 Assert.That(result, Is.EqualTo(expectedResult).Within(0.01));
             }
         }
+    }
 }
