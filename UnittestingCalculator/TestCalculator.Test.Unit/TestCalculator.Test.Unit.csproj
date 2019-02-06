@@ -47,21 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calcualtor_AddOverload_TestUnit.cs" />
+    <Compile Include="Calculator_AddOverload_TestUnit.cs" />
     <Compile Include="Calculator_Add_TestUnit.cs" />
-    <Compile Include="Calculator_Multiply_TestUnit.cs" />
+    <Compile Include="Calculator_PowerOverload_TestUnit.cs" />
+    <Compile Include="Calculator_Power_TestUnit.cs" />
     <Compile Include="Calculator_Subtract_TestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TesterCommit.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Calculator\HandtestCalculator.csproj">
       <Project>{dcc1c176-95df-4203-8601-a96234c4c106}</Project>
       <Name>HandtestCalculator</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
