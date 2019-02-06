@@ -49,14 +49,13 @@ namespace HandtestingCalculator
 
         public double Divide(double dividend, double divisor)
         {
-            if (divisor == 0 || Accumulator == 0)
+            if (divisor == 0 || dividend == 0)
             {
                 return 0;
             }
             else
             {
-                Accumulator = dividend / divisor;
-                return Accumulator;
+                return (dividend) / (divisor);
             }
         }
 
@@ -68,7 +67,7 @@ namespace HandtestingCalculator
             }
             else
             {
-                Accumulator = Accumulator / divisor;
+                Accumulator = (Accumulator) / (divisor);
                 return Accumulator;
             }
         }
