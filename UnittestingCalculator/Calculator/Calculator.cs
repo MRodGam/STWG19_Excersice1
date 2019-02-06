@@ -37,13 +37,13 @@ namespace HandtestingCalculator
 
         public double Multiply(double a, double b)
         {
-            double result = a * b;
+            double result = (a) * (b);
             return result;
         }
 
         public double Multiply(double multiplier)
         {
-            Accumulator = Accumulator * multiplier;
+            Accumulator = (Accumulator) * (multiplier);
             return Accumulator;
         }
 

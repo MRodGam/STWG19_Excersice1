@@ -49,6 +49,10 @@
   <ItemGroup>
     <Compile Include="Calculator_AddOverload_TestUnit.cs" />
     <Compile Include="Calculator_Add_TestUnit.cs" />
+    <Compile Include="Calculator_DivideOverload_TestUnit.cs" />
+    <Compile Include="Calculator_Divide_TestUnit.cs" />
+    <Compile Include="Calculator_MultiplyOverload_TestUnit.cs" />
+    <Compile Include="Calculator_Multiply_TestUnit.cs" />
     <Compile Include="Calculator_PowerOverload_TestUnit.cs" />
     <Compile Include="Calculator_Power_TestUnit.cs" />
     <Compile Include="Calculator_Subtract_TestUnit.cs" />
