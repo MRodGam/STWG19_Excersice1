@@ -63,7 +63,7 @@ namespace HandtestingCalculator
         {
             if (divisor == 0 || Accumulator ==0)
             {
-                return 0;
+                return Accumulator;
             }
             else
             {
