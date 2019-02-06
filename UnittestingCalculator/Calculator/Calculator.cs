@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -48,21 +49,28 @@ namespace HandtestingCalculator
 
         public double Divide(double dividend, double divisor)
         {
-            if (divisor == 0)
+            if (divisor == 0 || Accumulator == 0)
             {
-                Console.WriteLine("Ugyldig værdi. Der kan ikke divideres med 0.");  // Bør være en exception.
                 return 0;
             }
             else
             {
-                return dividend / divisor;
+                Accumulator = dividend / divisor;
+                return Accumulator;
             }
         }
 
         public double Divide (double divisor)
         {
-            Accumulator = Accumulator / divisor;
-            return Accumulator;
+            if (divisor == 0 || Accumulator ==0)
+            {
+                return 0;
+            }
+            else
+            {
+                Accumulator = Accumulator / divisor;
+                return Accumulator;
+            }
         }
 
         public double Power(double x, double exp)
