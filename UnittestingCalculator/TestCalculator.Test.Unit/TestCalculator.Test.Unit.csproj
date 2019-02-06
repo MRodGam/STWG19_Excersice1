@@ -52,6 +52,7 @@
     <Compile Include="Calculator_Multiply_TestUnit.cs" />
     <Compile Include="Calculator_Subtract_TestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesterCommit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
