@@ -19,9 +19,9 @@ namespace TestCalculator.Test.Unit
             uut = new Calculator();
         }
         // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at dividere to positive tal, af forskellige typer
-        [TestCase(2, 2, 4)]
-        [TestCase(5, 5, 25)]
-        [TestCase(3.6, 7.2, 25.920)]
+        [TestCase(2, 2, 1)]
+        [TestCase(5, 2.5, 2)]
+        [TestCase(3.6, 7.2, 0.5)]
         public void Divide_TwoPositiveNumbers_OutputIsCorrect(double a, double b, double expectedResult)
         {
             double result = uut.Divide(a, b);
@@ -29,9 +29,9 @@ namespace TestCalculator.Test.Unit
         }
 
         // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at dividere to negtive tal, af forskellige typer
-        [TestCase(-2, -2, 4)]
-        [TestCase(-5, -5, 25)]
-        [TestCase(-3.6, -7.2, 25.920)]
+        [TestCase(-2, -2, 1)]
+        [TestCase(-5, -2.5, 2)]
+        [TestCase(-3.6, -7.2, 0.5)]
         public void Divide_TwoNegativeNumbers_OutputIsCorrect(double a, double b, double expectedResult)
         {
             double result = uut.Divide(a, b);
@@ -40,9 +40,9 @@ namespace TestCalculator.Test.Unit
 
 
         // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at dividere et positivt tal og et negativt
-        [TestCase(2, -2, -4)]
-        [TestCase(5, -5, -25)]
-        [TestCase(3.6, -7.2, -25.920)]
+        [TestCase(2, -2, -1)]
+        [TestCase(5, -0.5, -10)]
+        [TestCase(3.6, -7.2, -0.5)]
         public void Divide_OnePositiveOneNegativeNumber_OutputIsCorrect(double a, double b, double expectedResult)
         {
             double result = uut.Divide(a, b);
@@ -50,9 +50,9 @@ namespace TestCalculator.Test.Unit
         }
 
         // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at dividere et negativt og et positivt
-        [TestCase(-2, 2, -4)]
-        [TestCase(-5, 5, -25)]
-        [TestCase(-3.6, 7.2, -25.920)]
+        [TestCase(-2, 2, -1)]
+        [TestCase(-5, 2.5, -2)]
+        [TestCase(-3.6, 7.2, -0.5)]
         public void Divide_OneNegativeOnePositiveNumber_OutputIsCorrect(double a, double b, double expectedResult)
         {
             double result = uut.Divide(a, b);
