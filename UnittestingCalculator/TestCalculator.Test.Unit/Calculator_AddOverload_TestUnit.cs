@@ -10,7 +10,7 @@ using HandtestingCalculator;
 namespace TestCalculator.Test.Unit
 {
     [TestFixture]
-    class Calcualtor_AddOverload_TestUnit
+    class Calculator_AddOverload_TestUnit
     {
         private Calculator uut;
 
