@@ -17,7 +17,7 @@ namespace TestCalculator.Test.Unit
         {
             uut = new Calculator();
         }
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange to positive tal, af forskellige typer
+
         [TestCase(2, 2, 4)]
         [TestCase(5, 5, 25)]
         [TestCase(3.6, 7.2, 25.920)]
@@ -28,7 +28,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01)); // Denne within angiver graden af decimaltal man betragter. I dette tilfælde er det inden for to decimaler.
         }
 
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange to negtive tal, af forskellige typer
         [TestCase(-2, -2, 4)]
         [TestCase(-5, -5, 25)]
         [TestCase(-3.6, -7.2, 25.920)]
@@ -39,8 +38,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01));
         }
 
-
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange et positivt tal og et negativt
         [TestCase(2, -2, -4)]
         [TestCase(5, -5, -25)]
         [TestCase(3.6, -7.2, -25.920)]
@@ -51,7 +48,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01));
         }
 
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange et negativt og et positivt
         [TestCase(-2, 2, -4)]
         [TestCase(-5, 5, -25)]
         [TestCase(-3.6, 7.2, -25.920)]
@@ -62,7 +58,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01));
         }
 
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange et positivt tal med 0
         [TestCase(1, 0, 0)]
         [TestCase(1.5, 0, 0)]
         public void Multiply_OnePositiveNumberZero_OutputIsCorrect(double a, double b, double expectedResult)
@@ -72,7 +67,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01));
         }
 
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange et negativt tal med 0
         [TestCase(-1, 0, 0)]
         [TestCase(-1.5, 0, 0)]
         public void Multiply_OneNegativeNumberZero_OutputIsCorrect(double a, double b, double expectedResult)
@@ -82,7 +76,6 @@ namespace TestCalculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(expectedResult).Within(0.01));
         }
 
-        // Jeg tester med brug af testcases, hvorvidt metoden er er i stand til at gange 0 med 0
         [TestCase(0, 0, 0)]
         public void Multiply_ZeroToZero_OutputIsCorrect(double a, double b, double expectedResult)
         {

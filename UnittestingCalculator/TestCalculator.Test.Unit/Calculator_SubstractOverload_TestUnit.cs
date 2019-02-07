@@ -18,17 +18,6 @@ namespace TestCalculator.Test.Unit
             uut = new Calculator();
         }
 
-        //[Test]
-        //public void Subtract_AAndB_ResultCorrect()
-        //{
-        //    double a = 5;
-        //    double b = 11;
-
-        //    double result = uut.Subtract(a, b);
-
-        //    Assert.That(result, Is.EqualTo(-6).Within(0.01)); //fastsætter en acceptable afvigelse
-        //}
-
         [TestCase(7, 8, -1)]
         [TestCase(9, 9, 0)]
         [TestCase(15, 14.5, 0.5)]
